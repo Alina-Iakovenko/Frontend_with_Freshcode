@@ -69,6 +69,11 @@ header {
   align-items: center;
   flex-wrap: nowrap;
   padding: 2rem 3.55rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
 }
 
 .logo {
@@ -91,19 +96,18 @@ header {
 /* #region hero-1 with photo */
 .hero-1 {
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   background-image: url(./assets/images/fund_main_photo.png);
-
-  /* фотографія погано підлаштовується під розмір еркану
-  певно треба кілька різних кадрувань від різні  */
 
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 10vh;
 }
 .hero-1-container {
   width: 50vh;
@@ -119,8 +123,7 @@ header {
   font-size: 65px;
 
   font-weight: var(--font-weight-extrabold);
-  line-height: 94.9%;
-  /* 61.685px */
+  line-height: 94.9%; 
   letter-spacing: -1.3px;
   text-transform: uppercase;
 }
@@ -181,32 +184,52 @@ header {
 
 /* #region hero-4 out mission  MANY_MANY QUESTIONS*/
 .our-mission {
-  background-image: url(./assets/images/background5.png);
-  background-repeat: no-repeat;
-  block-size: cover;
-  flex-shrink: 0; 
-  background-position: right;
-  /* display: flex;
-  flex-direction: row; */
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
-.our-mission>h5 {
-  font-size: var(--font-size-big);
-  /* background: #F1FDFF; */
-  padding: 4.5rem 3.1rem;
-  width: 100vw;
-  flex-grow: 2;  
+.our-mission-box {
+  width: 100%;  
+  background: #F1FDFF;
+  position: relative;
+  bottom: 0;
+  z-index: 1;    
 }
- .our-mission img{  
-  margin:-1.7rem 9rem 7rem 40.25rem ;
-   }
+.our-mission-box h5{  
+  padding: 4.5rem 3.1rem;
+  font-size: var(--font-size-big);
+  width: 50%;
+}
+.our-mission-box-photo{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  margin-top: -8rem;
+  margin-right: 9rem;
+}
+   
+.our-mission-box-background-waves {
+  position: absolute;
+    right: 3.1rem;
+    top: 0;
+    z-index: 2;
+}
 
 /* #endregion */
 
 /* #region hero-5 support fund  */
-#support-fund>p { 
+#support-fund{
+  padding-top: 0;
+}
+.charities-counter>p { 
   color: #73A6B1;
   text-align: center;
+}
+.charities-counter {
+  padding: 2.5rem;
 }
 
 /* #endregion */
@@ -218,28 +241,55 @@ footer {
   display: flex;  
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 50px;
+  align-items: center;  
 }
 
 .footer-block {
   display: flex;
   flex-direction: row;
-  padding: 2.5rem 3.55rem;
-  justify-content: space-around;
+  padding: 2.5rem 3.55rem 0rem;
+  gap: 4.65rem;
 }
 
-.contacts-info-item {
-  
+.contacts-info {
+  padding: 0 2rem;
 }
-
+.contacts-info-item{
+  padding-bottom: 3rem;
+  align-items: flex-start;
+}
 .contacts-info-item>a {
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);  
 }
 
 
 .form {
-  background-color: #fff;
+  background-color: #fff;  
 }
+.input-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1.95rem 2rem 1.55rem 4.65rem;  
+}
+.input-form h3{
+  text-align: start;
+  padding-bottom: 2rem;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.55rem;
+}
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3rem;
+  border: none;
+  background-color: #F9FADF;
+  padding: 1rem 20rem 1rem 2rem;
+}
+
 
 /* #endregion */
