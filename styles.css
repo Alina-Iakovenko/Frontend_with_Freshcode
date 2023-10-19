@@ -74,6 +74,8 @@ header {
   left: 0;
   right: 0;
   background-color: #FFF;
+  position: fixed;
+  z-index: 4;
 }
 
 .logo {
